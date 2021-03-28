@@ -66,32 +66,6 @@ Wire Wire Line
 Wire Wire Line
 	20000 5300 19650 5300
 $Comp
-L power:+3.3V #PWR021
-U 1 1 605B3847
-P 16200 4200
-F 0 "#PWR021" H 16200 4050 50  0001 C CNN
-F 1 "+3.3V" H 16215 4373 50  0000 C CNN
-F 2 "" H 16200 4200 50  0001 C CNN
-F 3 "" H 16200 4200 50  0001 C CNN
-	1    16200 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR020
-U 1 1 605B3ABE
-P 16050 4300
-F 0 "#PWR020" H 16050 4150 50  0001 C CNN
-F 1 "+5V" H 16065 4473 50  0000 C CNN
-F 2 "" H 16050 4300 50  0001 C CNN
-F 3 "" H 16050 4300 50  0001 C CNN
-	1    16050 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	16950 4300 16050 4300
-Wire Wire Line
-	16200 4200 16950 4200
-$Comp
 L power:GND #PWR022
 U 1 1 605B48B7
 P 16650 4000
@@ -111,25 +85,6 @@ Wire Wire Line
 Connection ~ 16800 4000
 Wire Wire Line
 	16800 4000 16950 4000
-$Comp
-L power:+5V #PWR04
-U 1 1 605B5090
-P 3850 5650
-F 0 "#PWR04" H 3850 5500 50  0001 C CNN
-F 1 "+5V" H 3865 5823 50  0000 C CNN
-F 2 "" H 3850 5650 50  0001 C CNN
-F 3 "" H 3850 5650 50  0001 C CNN
-	1    3850 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3850 5650 4150 5650
-Wire Wire Line
-	4150 5650 4150 5750
-Connection ~ 4150 5650
-Wire Wire Line
-	4150 5750 4150 5850
-Connection ~ 4150 5750
 $Comp
 L power:+3.3V #PWR05
 U 1 1 605B5E31
@@ -205,13 +160,9 @@ Wire Wire Line
 	18050 5700 18050 5300
 Wire Wire Line
 	17850 5250 17850 5200
-Wire Wire Line
-	17550 5500 18250 5500
-Wire Wire Line
-	18250 5600 17550 5600
-Text GLabel 19650 5500 2    50   Input ~ 0
-DialData
 Text GLabel 19650 5600 2    50   Input ~ 0
+DialData
+Text GLabel 19650 5500 2    50   Input ~ 0
 DialCLK
 Text GLabel 19550 2600 2    50   Input ~ 0
 DialData
@@ -272,30 +223,6 @@ Wire Wire Line
 Connection ~ 19250 9050
 Wire Wire Line
 	19250 9050 19250 8800
-$Comp
-L pspice:DIODE D2
-U 1 1 605CD448
-P 19250 8000
-F 0 "D2" V 19204 8128 50  0000 L CNN
-F 1 "DIODE" V 19295 8128 50  0000 L CNN
-F 2 "Diode_THT:D_5KP_P12.70mm_Horizontal" H 19250 8000 50  0001 C CNN
-F 3 "~" H 19250 8000 50  0001 C CNN
-	1    19250 8000
-	0    1    1    0   
-$EndComp
-$Comp
-L pspice:DIODE D3
-U 1 1 605CDB01
-P 19900 7450
-F 0 "D3" V 19946 7322 50  0000 R CNN
-F 1 "DIODE" V 19855 7322 50  0000 R CNN
-F 2 "Diode_THT:D_5KP_P12.70mm_Horizontal" H 19900 7450 50  0001 C CNN
-F 3 "~" H 19900 7450 50  0001 C CNN
-	1    19900 7450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	19250 8400 19250 8200
 Wire Wire Line
 	19250 7800 19250 7650
 Wire Wire Line
@@ -305,8 +232,6 @@ RollerMotor-
 Wire Wire Line
 	18550 7650 19250 7650
 Connection ~ 19250 7650
-Text GLabel 19450 7100 0    50   Input ~ 0
-RollerMotor+
 $Comp
 L power:+5V #PWR028
 U 1 1 605D0C1F
@@ -318,13 +243,6 @@ F 3 "" H 19900 6900 50  0001 C CNN
 	1    19900 6900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	19450 7100 19900 7100
-Wire Wire Line
-	19900 7100 19900 7250
-Wire Wire Line
-	19900 7100 19900 6900
-Connection ~ 19900 7100
 Text Notes 850  9750 0    197  ~ 0
 Pullup Resistors for I2c
 $Comp
@@ -349,26 +267,10 @@ F 3 "~" H 2800 10500 50  0001 C CNN
 	1    2800 10500
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR01
-U 1 1 605D2AC2
-P 2400 10250
-F 0 "#PWR01" H 2400 10100 50  0001 C CNN
-F 1 "+3.3V" H 2415 10423 50  0000 C CNN
-F 2 "" H 2400 10250 50  0001 C CNN
-F 3 "" H 2400 10250 50  0001 C CNN
-	1    2400 10250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1950 10350 1950 10250
 Wire Wire Line
-	1950 10250 2400 10250
-Wire Wire Line
-	2400 10250 2800 10250
-Wire Wire Line
 	2800 10250 2800 10350
-Connection ~ 2400 10250
 Text GLabel 1950 10650 3    50   Input ~ 0
 SDA
 Text GLabel 2800 10650 3    50   Input ~ 0
@@ -384,14 +286,8 @@ F 3 "~" H 18050 10850 50  0001 C CNN
 	1    18050 10850
 	1    0    0    -1  
 $EndComp
-Text GLabel 18250 10650 2    50   Input ~ 0
-RollerMotor+
 Text GLabel 18250 10750 2    50   Input ~ 0
 RollerMotor-
-Text GLabel 18250 10850 2    50   Input ~ 0
-Encoder-
-Text GLabel 19300 10850 2    50   Input ~ 0
-Encoder-
 $Comp
 L power:GND #PWR025
 U 1 1 605D7349
@@ -403,32 +299,9 @@ F 3 "" H 19100 10850 50  0001 C CNN
 	1    19100 10850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	19100 10850 19300 10850
-Text GLabel 18250 10950 2    50   Input ~ 0
-Encoder+
-Text GLabel 19300 10600 2    50   Input ~ 0
-Encoder+
-$Comp
-L power:+5V #PWR024
-U 1 1 605D9A42
-P 19100 10600
-F 0 "#PWR024" H 19100 10450 50  0001 C CNN
-F 1 "+5V" H 19115 10773 50  0000 C CNN
-F 2 "" H 19100 10600 50  0001 C CNN
-F 3 "" H 19100 10600 50  0001 C CNN
-	1    19100 10600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	19100 10600 19300 10600
 Text GLabel 18250 11050 2    50   Input ~ 0
 EncoderA
 Text GLabel 18250 11150 2    50   Input ~ 0
-EncoderB
-Text GLabel 6750 1650 2    50   Input ~ 0
-EncoderA
-Text GLabel 6750 1750 2    50   Input ~ 0
 EncoderB
 Text Notes 7350 10100 2    197  ~ 0
 SlackSensor
@@ -444,34 +317,19 @@ F 3 "~" H 6100 11100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR06
-U 1 1 605EBD93
-P 6650 11000
-F 0 "#PWR06" H 6650 10850 50  0001 C CNN
-F 1 "+3.3V" H 6665 11173 50  0000 C CNN
-F 2 "" H 6650 11000 50  0001 C CNN
-F 3 "" H 6650 11000 50  0001 C CNN
-	1    6650 11000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR07
 U 1 1 605EC293
-P 6800 11100
-F 0 "#PWR07" H 6800 10850 50  0001 C CNN
-F 1 "GND" H 6805 10927 50  0000 C CNN
-F 2 "" H 6800 11100 50  0001 C CNN
-F 3 "" H 6800 11100 50  0001 C CNN
-	1    6800 11100
+P 6850 11000
+F 0 "#PWR07" H 6850 10750 50  0001 C CNN
+F 1 "GND" H 6855 10827 50  0000 C CNN
+F 2 "" H 6850 11000 50  0001 C CNN
+F 3 "" H 6850 11000 50  0001 C CNN
+	1    6850 11000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6300 11000 6650 11000
-Text GLabel 6300 11200 2    50   Input ~ 0
+Text GLabel 6300 11100 2    50   Input ~ 0
 SlackS0
-Wire Wire Line
-	6300 11100 6800 11100
-Text GLabel 6300 11300 2    50   Input ~ 0
+Text GLabel 6300 11200 2    50   Input ~ 0
 SlackS1
 Text Notes 10750 10050 2    197  ~ 0
 Tachometer
@@ -484,7 +342,7 @@ F 1 "Conn_01x03_Male" H 10008 10840 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9900 10650 50  0001 C CNN
 F 3 "~" H 9900 10650 50  0001 C CNN
 	1    9900 10650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR015
@@ -495,17 +353,6 @@ F 1 "GND" H 10505 10627 50  0000 C CNN
 F 2 "" H 10500 10800 50  0001 C CNN
 F 3 "" H 10500 10800 50  0001 C CNN
 	1    10500 10800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR014
-U 1 1 605F313F
-P 10500 10550
-F 0 "#PWR014" H 10500 10400 50  0001 C CNN
-F 1 "+3.3V" H 10515 10723 50  0000 C CNN
-F 2 "" H 10500 10550 50  0001 C CNN
-F 3 "" H 10500 10550 50  0001 C CNN
-	1    10500 10550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -525,38 +372,38 @@ TX1
 Text GLabel 16950 2600 0    50   Input ~ 0
 RX1
 Text GLabel 16950 2700 0    50   Input ~ 0
-TX0
+TX1
 Text Notes 19450 10200 2    197  ~ 0
 Roller Motor Output
 Text Notes 3400 13000 2    197  ~ 0
 ScrewMotor
 Text Notes 7650 13000 2    197  ~ 0
 SpollerMotor
-Text Notes 11250 13000 2    197  ~ 0
+Text Notes 11200 12550 2    197  ~ 0
 Fans
 Text Notes 14500 12950 2    197  ~ 0
 Scales
 $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 605FC928
-P 2450 14000
-F 0 "J1" H 2558 14181 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 2558 14090 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2450 14000 50  0001 C CNN
-F 3 "~" H 2450 14000 50  0001 C CNN
-	1    2450 14000
-	1    0    0    -1  
+P 2450 14100
+F 0 "J1" H 2558 14281 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2558 14190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2450 14100 50  0001 C CNN
+F 3 "~" H 2450 14100 50  0001 C CNN
+	1    2450 14100
+	1    0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male J3
 U 1 1 605FCF26
-P 6750 13950
-F 0 "J3" H 6858 14131 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 6858 14040 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6750 13950 50  0001 C CNN
-F 3 "~" H 6750 13950 50  0001 C CNN
-	1    6750 13950
-	1    0    0    -1  
+P 6750 14050
+F 0 "J3" H 6858 14231 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6858 14140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6750 14050 50  0001 C CNN
+F 3 "~" H 6750 14050 50  0001 C CNN
+	1    6750 14050
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR02
@@ -645,27 +492,12 @@ Wire Wire Line
 Connection ~ 11600 15250
 Wire Wire Line
 	11600 15250 11600 15000
-$Comp
-L pspice:DIODE D1
-U 1 1 6060B4A2
-P 11600 14200
-F 0 "D1" V 11554 14328 50  0000 L CNN
-F 1 "DIODE" V 11645 14328 50  0000 L CNN
-F 2 "Diode_THT:D_5KP_P12.70mm_Horizontal" H 11600 14200 50  0001 C CNN
-F 3 "~" H 11600 14200 50  0001 C CNN
-	1    11600 14200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	11600 14600 11600 14400
-Wire Wire Line
-	11600 14000 11600 13850
+	11600 14000 11600 13900
 Text GLabel 10900 13850 0    50   Input ~ 0
 Fans-
 Wire Wire Line
 	10900 13850 11600 13850
-Text GLabel 10900 13550 0    50   Input ~ 0
-Fans+
 $Comp
 L power:+5V #PWR016
 U 1 1 6060B4B5
@@ -678,22 +510,18 @@ F 3 "" H 11600 13350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11600 13550 11600 13350
-Wire Wire Line
-	10900 13550 11600 13550
+	11600 13550 11600 13500
 $Comp
 L Connector:Conn_01x02_Male J6
 U 1 1 606176F7
-P 9950 13550
-F 0 "J6" H 10058 13731 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 10058 13640 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9950 13550 50  0001 C CNN
-F 3 "~" H 9950 13550 50  0001 C CNN
-	1    9950 13550
-	1    0    0    -1  
+P 9950 13650
+F 0 "J6" H 10058 13831 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10058 13740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9950 13650 50  0001 C CNN
+F 3 "~" H 9950 13650 50  0001 C CNN
+	1    9950 13650
+	1    0    0    1   
 $EndComp
-Text GLabel 10150 13550 2    50   Input ~ 0
-Fans+
 Text GLabel 10150 13650 2    50   Input ~ 0
 Fans-
 $Comp
@@ -760,13 +588,13 @@ Wire Wire Line
 	14300 14150 14000 14150
 Wire Wire Line
 	14000 14150 14000 14000
-Text GLabel 6750 2450 2    50   Input ~ 0
+Text GLabel 19550 3000 2    50   Input ~ 0
 ScaleD1
-Text GLabel 6750 2550 2    50   Input ~ 0
+Text GLabel 19550 2900 2    50   Input ~ 0
 ScaleD2
-Text GLabel 6750 2650 2    50   Input ~ 0
+Text GLabel 19550 2800 2    50   Input ~ 0
 ScaleCLK1
-Text GLabel 6750 2750 2    50   Input ~ 0
+Text GLabel 19550 3100 2    50   Input ~ 0
 ScaleCLK2
 Text Notes 10750 5200 2    276  ~ 0
 Power
@@ -831,17 +659,6 @@ SDA
 Text GLabel 9850 2800 0    50   Input ~ 0
 SCL
 $Comp
-L Connector:Conn_01x02_Male J4
-U 1 1 6062DFA7
-P 9900 5850
-F 0 "J4" H 10008 6031 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 10008 5940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9900 5850 50  0001 C CNN
-F 3 "~" H 9900 5850 50  0001 C CNN
-	1    9900 5850
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR012
 U 1 1 6062EBC7
 P 10250 5950
@@ -878,4 +695,213 @@ F 3 "" H 20000 5300 50  0001 C CNN
 	1    20000 5300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1950 10250 2400 10250
+$Comp
+L power:+5V #PWR0101
+U 1 1 605E7A4C
+P 2400 10250
+F 0 "#PWR0101" H 2400 10100 50  0001 C CNN
+F 1 "+5V" H 2415 10423 50  0000 C CNN
+F 2 "" H 2400 10250 50  0001 C CNN
+F 3 "" H 2400 10250 50  0001 C CNN
+	1    2400 10250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2400 10250
+Wire Wire Line
+	2400 10250 2800 10250
+Wire Wire Line
+	6300 11000 6850 11000
+Wire Wire Line
+	7050 11300 6300 11300
+Wire Wire Line
+	18250 10850 19100 10850
+$Comp
+L power:+5V #PWR024
+U 1 1 605D9A42
+P 19350 11150
+F 0 "#PWR024" H 19350 11000 50  0001 C CNN
+F 1 "+5V" H 19365 11323 50  0000 C CNN
+F 2 "" H 19350 11150 50  0001 C CNN
+F 3 "" H 19350 11150 50  0001 C CNN
+	1    19350 11150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18250 10950 18900 10950
+Wire Wire Line
+	18900 10950 18900 11150
+Wire Wire Line
+	18900 11150 19350 11150
+Wire Wire Line
+	10150 13550 10800 13550
+Wire Wire Line
+	19900 6900 19900 7250
+$Comp
+L power:+5V #PWR0102
+U 1 1 6062089A
+P 18600 10650
+F 0 "#PWR0102" H 18600 10500 50  0001 C CNN
+F 1 "+5V" H 18615 10823 50  0000 C CNN
+F 2 "" H 18600 10650 50  0001 C CNN
+F 3 "" H 18600 10650 50  0001 C CNN
+	1    18600 10650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	18600 10650 18250 10650
+Text GLabel 16950 4400 0    50   Input ~ 0
+Vin
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 60628487
+P 9900 5850
+F 0 "J4" H 9872 5782 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9872 5873 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9900 5850 50  0001 C CNN
+F 3 "~" H 9900 5850 50  0001 C CNN
+	1    9900 5850
+	1    0    0    1   
+$EndComp
+Text GLabel 10100 5750 2    50   Input ~ 0
+Vin
+$Comp
+L Connector:Conn_01x02_Male J12
+U 1 1 6062B5BD
+P 9900 13250
+F 0 "J12" H 10008 13431 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10008 13340 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9900 13250 50  0001 C CNN
+F 3 "~" H 9900 13250 50  0001 C CNN
+	1    9900 13250
+	1    0    0    1   
+$EndComp
+Text GLabel 10100 13250 2    50   Input ~ 0
+Fans-
+Wire Wire Line
+	10100 13150 10800 13150
+Wire Wire Line
+	10800 13150 10800 13550
+Connection ~ 10800 13550
+Wire Wire Line
+	10800 13550 11600 13550
+$Comp
+L Connector:Conn_01x02_Male J11
+U 1 1 6062F882
+P 9900 12850
+F 0 "J11" H 10008 13031 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10008 12940 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9900 12850 50  0001 C CNN
+F 3 "~" H 9900 12850 50  0001 C CNN
+	1    9900 12850
+	1    0    0    1   
+$EndComp
+Text GLabel 10100 12850 2    50   Input ~ 0
+Fans-
+Wire Wire Line
+	10100 12750 10800 12750
+Wire Wire Line
+	10800 13150 10800 12750
+Connection ~ 10800 13150
+Wire Wire Line
+	11950 13900 11600 13900
+Connection ~ 11600 13900
+Wire Wire Line
+	11600 13900 11600 13850
+Wire Wire Line
+	11600 13500 11950 13500
+Connection ~ 11600 13500
+Wire Wire Line
+	11600 13500 11600 13350
+$Comp
+L Device:D D1
+U 1 1 6066CFE2
+P 11600 14150
+F 0 "D1" H 11600 14367 50  0000 C CNN
+F 1 "D" H 11600 14276 50  0000 C CNN
+F 2 "Diode_THT:D_DO-15_P15.24mm_Horizontal" H 11600 14150 50  0001 C CNN
+F 3 "~" H 11600 14150 50  0001 C CNN
+	1    11600 14150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11600 14300 11600 14600
+$Comp
+L Device:D D4
+U 1 1 60675D3C
+P 11950 13700
+F 0 "D4" V 11904 13780 50  0000 L CNN
+F 1 "D" V 11995 13780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-15_P15.24mm_Horizontal" H 11950 13700 50  0001 C CNN
+F 3 "~" H 11950 13700 50  0001 C CNN
+	1    11950 13700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11950 13550 11950 13500
+Wire Wire Line
+	11950 13850 11950 13900
+$Comp
+L Device:D D3
+U 1 1 606853B4
+P 19900 7400
+F 0 "D3" V 19854 7480 50  0000 L CNN
+F 1 "D" V 19945 7480 50  0000 L CNN
+F 2 "Diode_THT:D_DO-15_P15.24mm_Horizontal" H 19900 7400 50  0001 C CNN
+F 3 "~" H 19900 7400 50  0001 C CNN
+	1    19900 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 606864CA
+P 19250 7950
+F 0 "D2" V 19296 7870 50  0000 R CNN
+F 1 "D" V 19205 7870 50  0000 R CNN
+F 2 "Diode_THT:D_DO-15_P15.24mm_Horizontal" H 19250 7950 50  0001 C CNN
+F 3 "~" H 19250 7950 50  0001 C CNN
+	1    19250 7950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	19250 8100 19250 8400
+Wire Wire Line
+	19900 7650 19900 7550
+Wire Wire Line
+	17550 5600 17900 5600
+Wire Wire Line
+	17900 5600 17900 5500
+Wire Wire Line
+	17900 5500 18250 5500
+Text GLabel 17550 5500 2    50   Input ~ 0
+LV2
+Text GLabel 18250 5600 0    50   Input ~ 0
+LV2
+$Comp
+L power:+5V #PWR0103
+U 1 1 606BA9A1
+P 10500 10550
+F 0 "#PWR0103" H 10500 10400 50  0001 C CNN
+F 1 "+5V" H 10515 10723 50  0000 C CNN
+F 2 "" H 10500 10550 50  0001 C CNN
+F 3 "" H 10500 10550 50  0001 C CNN
+	1    10500 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 606BC1EC
+P 7050 11300
+F 0 "#PWR0104" H 7050 11150 50  0001 C CNN
+F 1 "+5V" H 7065 11473 50  0000 C CNN
+F 2 "" H 7050 11300 50  0001 C CNN
+F 3 "" H 7050 11300 50  0001 C CNN
+	1    7050 11300
+	1    0    0    -1  
+$EndComp
+Text GLabel 6750 1750 2    50   Input ~ 0
+EncoderB
+Text GLabel 6750 1650 2    50   Input ~ 0
+EncoderA
 $EndSCHEMATC
