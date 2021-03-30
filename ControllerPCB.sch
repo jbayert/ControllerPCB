@@ -365,14 +365,14 @@ Text GLabel 10100 10650 2    50   Input ~ 0
 TactSignal
 Text GLabel 4150 2950 0    50   Input ~ 0
 TactSignal
-Text GLabel 4150 1850 0    50   Input ~ 0
-RX1
-Text GLabel 4150 1950 0    50   Input ~ 0
-TX1
+Text GLabel 4150 2250 0    50   Input ~ 0
+UartToMega
+Text GLabel 4150 2350 0    50   Input ~ 0
+UartToNano
 Text GLabel 16950 2600 0    50   Input ~ 0
-RX1
+UartToNano
 Text GLabel 16950 2700 0    50   Input ~ 0
-TX1
+UartToMega
 Text Notes 19450 10200 2    197  ~ 0
 Roller Motor Output
 Text Notes 3400 13000 2    197  ~ 0
