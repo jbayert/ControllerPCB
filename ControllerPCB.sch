@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Arduino:Arduino_Mega2560_Shield XA1
-U 1 1 605A9FAE
-P 5450 3800
-F 0 "XA1" H 5450 1419 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 5450 1313 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Shield" H 6150 6550 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6150 6550 60  0001 C CNN
-	1    5450 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Arduino:Arduino_Nano_Socket XA2
 U 1 1 605AD753
 P 18250 3500
@@ -111,18 +100,6 @@ F 3 "" H 3850 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3850 5050 4150 5050
-Wire Wire Line
-	4150 5450 4150 5350
-Connection ~ 4150 5050
-Connection ~ 4150 5150
-Wire Wire Line
-	4150 5150 4150 5050
-Connection ~ 4150 5250
-Wire Wire Line
-	4150 5250 4150 5150
-Connection ~ 4150 5350
-Wire Wire Line
-	4150 5350 4150 5250
 Text GLabel 4150 5950 0    50   Input ~ 0
 Vin
 $Comp
@@ -232,17 +209,6 @@ RollerMotor-
 Wire Wire Line
 	18550 7650 19250 7650
 Connection ~ 19250 7650
-$Comp
-L power:+5V #PWR028
-U 1 1 605D0C1F
-P 19900 6900
-F 0 "#PWR028" H 19900 6750 50  0001 C CNN
-F 1 "+5V" H 19915 7073 50  0000 C CNN
-F 2 "" H 19900 6900 50  0001 C CNN
-F 3 "" H 19900 6900 50  0001 C CNN
-	1    19900 6900
-	1    0    0    -1  
-$EndComp
 Text Notes 850  9750 0    197  ~ 0
 Pullup Resistors for I2c
 $Comp
@@ -498,17 +464,6 @@ Text GLabel 10900 13850 0    50   Input ~ 0
 Fans-
 Wire Wire Line
 	10900 13850 11600 13850
-$Comp
-L power:+5V #PWR016
-U 1 1 6060B4B5
-P 11600 13350
-F 0 "#PWR016" H 11600 13200 50  0001 C CNN
-F 1 "+5V" H 11615 13523 50  0000 C CNN
-F 2 "" H 11600 13350 50  0001 C CNN
-F 3 "" H 11600 13350 50  0001 C CNN
-	1    11600 13350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11600 13550 11600 13500
 $Comp
@@ -629,19 +584,6 @@ $EndComp
 Wire Wire Line
 	9550 3500 9850 3500
 $Comp
-L power:+5V #PWR010
-U 1 1 60628A57
-P 9600 2600
-F 0 "#PWR010" H 9600 2450 50  0001 C CNN
-F 1 "+5V" H 9615 2773 50  0000 C CNN
-F 2 "" H 9600 2600 50  0001 C CNN
-F 3 "" H 9600 2600 50  0001 C CNN
-	1    9600 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 2600 9850 2600
-$Comp
 L power:GND #PWR011
 U 1 1 6062ADC7
 P 9600 2900
@@ -669,19 +611,6 @@ F 3 "" H 10250 5950 50  0001 C CNN
 	1    10250 5950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR013
-U 1 1 6062F2BE
-P 10400 5850
-F 0 "#PWR013" H 10400 5700 50  0001 C CNN
-F 1 "+5V" H 10415 6023 50  0000 C CNN
-F 2 "" H 10400 5850 50  0001 C CNN
-F 3 "" H 10400 5850 50  0001 C CNN
-	1    10400 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10400 5850 10100 5850
 Wire Wire Line
 	10100 5950 10250 5950
 $Comp
@@ -736,8 +665,6 @@ Wire Wire Line
 	18900 11150 19350 11150
 Wire Wire Line
 	10150 13550 10800 13550
-Wire Wire Line
-	19900 6900 19900 7250
 $Comp
 L power:+5V #PWR0102
 U 1 1 6062089A
@@ -912,4 +839,50 @@ Text GLabel 6750 2050 2    50   Input ~ 0
 FansSpeed
 Text GLabel 6750 2150 2    50   Input ~ 0
 RollerSpeed
+Text GLabel 9850 3300 0    50   Input ~ 0
+Vin
+$Comp
+L power:+5V #PWR0105
+U 1 1 6063DDF5
+P 3750 5650
+F 0 "#PWR0105" H 3750 5500 50  0001 C CNN
+F 1 "+5V" H 3765 5823 50  0000 C CNN
+F 2 "" H 3750 5650 50  0001 C CNN
+F 3 "" H 3750 5650 50  0001 C CNN
+	1    3750 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5650 4150 5650
+Text GLabel 10100 5850 2    50   Input ~ 0
+5Vin
+Text GLabel 11600 13350 0    50   Input ~ 0
+5Vin
+Text GLabel 19900 6850 0    50   Input ~ 0
+5Vin
+Wire Wire Line
+	19900 6850 19900 7250
+Wire Wire Line
+	4150 5450 4150 5350
+Connection ~ 4150 5350
+Wire Wire Line
+	4150 5350 4150 5250
+Connection ~ 4150 5250
+Wire Wire Line
+	4150 5250 4150 5150
+Wire Wire Line
+	4150 5150 4150 5050
+Connection ~ 4150 5150
+Connection ~ 4150 5050
+$Comp
+L Arduino:Arduino_Mega2560_Shield XA1
+U 1 1 605A9FAE
+P 5450 3800
+F 0 "XA1" H 5450 1419 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 5450 1313 60  0000 C CNN
+F 2 "Arduino:Arduino_Mega2560_Shield" H 6150 6550 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6150 6550 60  0001 C CNN
+	1    5450 3800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
