@@ -212,7 +212,7 @@ Wire Wire Line
 Wire Wire Line
 	18700 8600 18950 8600
 Text GLabel 18400 8600 0    50   Input ~ 0
-RollerMotor
+RollerSpeed
 Wire Wire Line
 	18400 8600 18700 8600
 Connection ~ 18700 8600
@@ -904,4 +904,12 @@ Text GLabel 6750 1750 2    50   Input ~ 0
 EncoderB
 Text GLabel 6750 1650 2    50   Input ~ 0
 EncoderA
+Text GLabel 4150 3050 0    50   Input ~ 0
+SlackS0
+Text GLabel 4150 3150 0    50   Input ~ 0
+SlackS1
+Text GLabel 6750 2050 2    50   Input ~ 0
+FansSpeed
+Text GLabel 6750 2150 2    50   Input ~ 0
+RollerSpeed
 $EndSCHEMATC
